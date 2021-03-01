@@ -2,7 +2,7 @@
 ## 즉석 복권 체험 어플
 
 ## 사용언어 및 환경
-android studio
+android studio  
 java
 
 ## 참고 사이트
