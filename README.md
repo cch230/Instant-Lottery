@@ -27,4 +27,8 @@ Representative email : cch01024857239@gmail.com
 * Statistics
 ![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/rank.png)  
 
+# App Image
+![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/KakaoTalk_20210301_183530926.jpg)  
+![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/KakaoTalk_20210301_183530926_01.jpg)  
+
  
