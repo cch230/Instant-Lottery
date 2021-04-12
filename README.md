@@ -6,7 +6,7 @@ android studio
 java
 
 ## 참고 사이트
-[ScratchView](https://github.com/D-clock/ScratchView)
+* [ScratchView](https://github.com/D-clock/ScratchView)
 
 Representative email : cch01024857239@gmail.com
 ---
