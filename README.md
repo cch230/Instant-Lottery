@@ -20,11 +20,11 @@ Representative email : cch01024857239@gmail.com
 
 # How to use
 *  [앱과 DB연동](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/java-rds.html)
-* Information for he odds of winning the lottery  
+* Information for he odds of winning the lottery    
 ![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/info.png)  
-* Reset
+* Reset  
 ![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/reset.png)  
-* Statistics
+* Statistics  
 ![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/rank.png)  
 
 # App Image
