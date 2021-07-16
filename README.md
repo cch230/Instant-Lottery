@@ -19,7 +19,7 @@ Representative email : cch01024857239@gmail.com
 * 대다수의 사람들에게 복권구매란 한 주간의 즐거운 희망을 심어주는 가벼운 오락 활동의 하나입니다.
 
 # How to use
-*  [앱과 DB연동](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/java-rds.html)
+
 * Information for he odds of winning the lottery    
 ![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/info.png)  
 * Reset  
