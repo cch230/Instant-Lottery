@@ -227,15 +227,15 @@
         android:src="@drawable/i_1000"
         android:clickable="true"
         />
+
     <ImageView
         android:id="@+id/imagebtn1"
         android:layout_width="75dp"
         android:layout_height="72dp"
         android:layout_marginLeft="135dp"
         android:layout_marginTop="45dp"
-        android:src="@drawable/info"
         android:clickable="true"
-        />
+        android:src="@drawable/info" />
     <ImageView
         android:id="@+id/imagebtn2"
         android:layout_width="113dp"
