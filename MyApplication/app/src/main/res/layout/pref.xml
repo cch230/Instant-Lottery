@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <int name="1st" value="0" />
+    <int name="3rd" value="0" />
+    <int name="2nd" value="0" />
+    <int name="4th" value="0" />
+    <int name="5th" value="0" />
+    <int name="reset" value="0" />
+</map>
