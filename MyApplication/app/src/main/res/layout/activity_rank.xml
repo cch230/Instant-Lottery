@@ -26,8 +26,8 @@
              android:layout_width="120dp"
              android:layout_height="50dp"
              android:layout_marginLeft="100dp"
-             android:layout_marginTop="7dp"
-             android:textSize="22sp"
+             android:layout_marginTop="10dp"
+             android:textSize="17sp"
              android:textColor="@color/black"
              android:gravity="center"/>
          <TextView
@@ -38,6 +38,7 @@
              android:layout_below="@+id/rankTxt1"
              android:textSize="22sp"
              android:textColor="@color/black"
+             android:textAlignment="gravity"
              android:gravity="center"
              />
          <TextView
@@ -45,10 +46,11 @@
              android:layout_width="120dp"
              android:layout_height="50dp"
              android:layout_below="@+id/rankTxt2"
-             android:layout_marginTop="7dp"
              android:layout_marginLeft="100dp"
+             android:layout_marginTop="7dp"
              android:textSize="22sp"
              android:textColor="@color/black"
+             android:textAlignment="gravity"
              android:gravity="center"
              />
          <TextView
@@ -60,6 +62,7 @@
              android:layout_marginLeft="100dp"
              android:textSize="22sp"
              android:textColor="@color/black"
+             android:textAlignment="gravity"
              android:gravity="center"
              />
          <TextView
@@ -71,6 +74,7 @@
              android:layout_marginLeft="100dp"
              android:textSize="22sp"
              android:textColor="@color/black"
+             android:textAlignment="gravity"
              android:gravity="center"
              />
          <TextView
@@ -82,11 +86,13 @@
              android:layout_marginLeft="100dp"
              android:textSize="22sp"
              android:textColor="@color/black"
+             android:textAlignment="gravity"
              android:gravity="center"
              />
      </LinearLayout>
 
     </FrameLayout>
+
     <ImageView
         android:id="@+id/imagebtn3"
         android:layout_width="133dp"
@@ -97,4 +103,13 @@
         android:src="@drawable/rank"
         android:clickable="true"
         />
+    <TextView
+        android:id="@+id/winPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/frame2"/>
 </RelativeLayout>
