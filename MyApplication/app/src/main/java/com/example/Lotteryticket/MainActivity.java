@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     int[] Winning=new int[5];
     int[] percent=new int[5];
     int[] check=new int[5];
+    int[] tmp2=new int[5];
     String price[]=new String[5];
     boolean WinFlag=false;
     int i=0;
@@ -52,7 +53,24 @@ public class MainActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.imagebtn1);
         btn2 = findViewById(R.id.imagebtn2);
         scratchView=findViewById(R.id.scratch_vie);
+        for(int i=0;i<5;i++){
+            tmp2[i]=0;
+        }
         reset();
+        /*int tmp=0,per=0;
+        while (tmp<1811){
+            WinFlag=false;
+            reset();
+            if(tmp%18==0){
+                Log.i("ing", per+"%");
+                for(int i=0;i<5;i++){
+                    Log.i("ing", (i+1)+"등 : "+tmp2[i]);
+                }
+                per++;
+            }
+            tmp++;
+        }*/
+
         scratchView.setEraserSize(30f);
         scratchView.setMaskColor(Color.rgb(36,185,149));
         btn.setOnTouchListener(new View.OnTouchListener() {
@@ -137,8 +155,9 @@ public class MainActivity extends AppCompatActivity {
 
         while (i < 5) {
             ran[i] = new Random();
-            ran[i].setSeed(System.currentTimeMillis());
+            ran[i].setSeed(System.currentTimeMillis()*i);
             Winning[i] = ran[i].nextInt(percent[i]) + 1;
+            ran[i].setSeed(percent[i]);
             check[i] = ran[i].nextInt(percent[i]) + 1;
             Log.e("mm", check[i] + "//" + Winning[i]);
             int img = random.nextInt(20) + 1;
@@ -150,26 +169,31 @@ public class MainActivity extends AppCompatActivity {
                         rank=pref.getInt("1st",0);
                         rank++;
                         editor.putInt("1st", rank);
+                        tmp2[0]++;
                         break;
                     case 2:
                         rank=pref.getInt("2nd",0);
                         rank++;
                         editor.putInt("2nd", rank);
+                        tmp2[1]++;
                         break;
                     case 3:
                         rank=pref.getInt("3rd",0);
                         rank++;
                         editor.putInt("3rd", rank);
+                        tmp2[2]++;
                         break;
                     case 4:
                         rank=pref.getInt("4th",0);
                         rank++;
                         editor.putInt("4th", rank);
+                        tmp2[3]++;
                         break;
                     case 5:
                         rank=pref.getInt("5th",0);
                         rank++;
                         editor.putInt("5th", rank);
+                        tmp2[4]++;
                         break;
                 }
 
@@ -220,7 +244,7 @@ public class MainActivity extends AppCompatActivity {
                             j--;
                         }
                     }
-                    Log.e("mm","금액"+otherPrice[j]);
+                   // Log.e("mm","금액"+otherPrice[j]);
                 }
                 int k = 0;
                 for (int j = 0; j < 10; j++) {
