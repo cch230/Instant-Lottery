@@ -15,10 +15,14 @@ import android.widget.Toast;
 
 import static android.widget.Toast.makeText;
 
+import java.text.DecimalFormat;
+
 public class rank extends AppCompatActivity {
     private TextView[] textViews= new TextView[6];
+    private TextView winPrice;
     private ImageView imageView;
     int[] ints=new int[6];
+    int winPrice_tmp=0;
     private long backKeyPressedTime = 0;
     Toast toast;
 
@@ -28,6 +32,9 @@ public class rank extends AppCompatActivity {
         setContentView(R.layout.activity_rank);
         SharedPreferences pref = getSharedPreferences("pref",MODE_PRIVATE);
         imageView=findViewById(R.id.imagebtn3);
+        winPrice=findViewById(R.id.winPrice);
+        DecimalFormat formatter = new DecimalFormat("###,###");
+
         ints[0]=pref.getInt("reset",0);
         ints[1]=pref.getInt("1st",0);
         ints[2]=pref.getInt("2nd",0);
@@ -38,16 +45,31 @@ public class rank extends AppCompatActivity {
         for(int i=1;i<7;i++){
             int resTxtview = getResources().getIdentifier("rankTxt" + i, "id", getPackageName());
             textViews[i-1]=findViewById(resTxtview);
-            Log.e("bb",String.valueOf(ints[i-1]));
             if(i==1){
-                textViews[i-1].setText(ints[i-1]+" 원");
+                textViews[i-1].setText(formatter.format(ints[i-1])+" 원");
             }
             else{
-                textViews[i-1].setText(ints[i-1]+" 번");
+                if(i==2){
+                    winPrice_tmp+=ints[i-1]*500000000;
+                }
+                else if(i==3){
+                    winPrice_tmp+=ints[i-1]*20000000;
+                }
+                else if(i==4){
+                    winPrice_tmp+=ints[i-1]*100000;
+                }
+                else if(i==5){
+                    winPrice_tmp+=ints[i-1]*5000;
+                }
+                else if(i==6){
+                    winPrice_tmp+=ints[i-1]*1000;
+                }
+                textViews[i-1].setText(formatter.format(ints[i-1])+" 번");
             }
             textViews[i-1].setTextColor(Color.rgb(36,185,149));
         }
-
+        winPrice.setText("누적 당첨금액: "+formatter.format(winPrice_tmp)+" 원");
+        winPrice.setTextColor(Color.rgb(36,185,149));
         imageView.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (v.getId()) {
