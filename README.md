@@ -26,7 +26,7 @@ Representative email : cch01024857239@gmail.com
 ![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/reset.png) ![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/reset2.png)  
 * Statistics  
 ![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/rank.png) ![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/rank2.png)  
-* Change mode
+* Change mode  
 ![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/mode.png) ![UI](https://github.com/cch230/Instant-Lottery/blob/main/app_image/mode3.png)  
   
 # App Image
