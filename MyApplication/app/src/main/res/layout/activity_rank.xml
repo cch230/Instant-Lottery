@@ -112,4 +112,12 @@
         android:textSize="20sp"
         android:textColor="@color/black"
         android:layout_below="@id/frame2"/>
+    <ImageView
+        android:id="@+id/imagebtn2"
+        android:layout_width="100dp"
+        android:layout_height="108dp"
+        android:layout_marginLeft="270dp"
+        android:clickable="true"
+        android:src="@drawable/mode" />
+
 </RelativeLayout>

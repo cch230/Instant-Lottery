@@ -20,7 +20,7 @@ import java.text.DecimalFormat;
 public class rank extends AppCompatActivity {
     private TextView[] textViews= new TextView[6];
     private TextView winPrice;
-    private ImageView imageView;
+    private ImageView imageView,imageView2;
     int[] ints=new int[6];
     int winPrice_tmp=0;
     private long backKeyPressedTime = 0;
@@ -32,6 +32,7 @@ public class rank extends AppCompatActivity {
         setContentView(R.layout.activity_rank);
         SharedPreferences pref = getSharedPreferences("pref",MODE_PRIVATE);
         imageView=findViewById(R.id.imagebtn3);
+        imageView2=findViewById(R.id.imagebtn2);
         winPrice=findViewById(R.id.winPrice);
         DecimalFormat formatter = new DecimalFormat("###,###");
 
@@ -77,6 +78,18 @@ public class rank extends AppCompatActivity {
                         Intent intent=new Intent(rank.this,MainActivity.class);
                         startActivity(intent);
                         finish();
+                        break;
+                }
+                return false;
+            }
+        });
+        imageView2.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (v.getId()) {
+                    case R.id.imagebtn2:
+                        Intent intent=new Intent(rank.this,MainActivity2.class);
+                        startActivity(intent);
+                        finishAffinity();
                         break;
                 }
                 return false;
