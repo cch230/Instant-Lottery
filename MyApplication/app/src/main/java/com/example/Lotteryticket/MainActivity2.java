@@ -1,27 +1,25 @@
 package com.example.Lotteryticket;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static android.widget.Toast.makeText;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.clock.scratch.ScratchView;
 
 import java.util.Random;
 
-import static android.widget.Toast.makeText;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
     private ScratchView scratchView;
     private ImageView[] imageViews= new ImageView[10];
     private TextView[] textViews= new TextView[10];
@@ -44,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
         textView=findViewById(R.id.info);
         view = findViewById(R.id.view_1);
@@ -79,11 +77,11 @@ public class MainActivity extends AppCompatActivity {
                 switch (v.getId()) {
                     case R.id.imagebtn:
                         if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                            btn.setImageResource(R.drawable.reset1);
+                            btn.setImageResource(R.drawable.reset3);
                             Log.e("nn", "ok1");
 
                         } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                            btn.setImageResource(R.drawable.reset);
+                            btn.setImageResource(R.drawable.reset2);
                             scratchView.reset();
                             WinFlag = false;
                             reset();
@@ -98,14 +96,14 @@ public class MainActivity extends AppCompatActivity {
                 switch (v.getId()) {
                     case R.id.imagebtn1:
                         if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                            btn1.setImageResource(R.drawable.info1);
+                            btn1.setImageResource(R.drawable.info3);
                             view.setVisibility(View.INVISIBLE);
                             textView.setTextColor(Color.rgb(255,255,255));
                             textView.setVisibility(View.VISIBLE);
                             textView.bringToFront();
                             Log.e("nn","ok2");
                         } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                            btn1.setImageResource(R.drawable.info );
+                            btn1.setImageResource(R.drawable.info2 );
                             textView.setVisibility(View.INVISIBLE);
                             view.setVisibility(View.VISIBLE);
                         }
@@ -118,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (v.getId()) {
                     case R.id.imagebtn2:
-                        Intent intent=new Intent(MainActivity.this,rank.class);
+                        Intent intent=new Intent(MainActivity2.this,rank2.class);
                         startActivity(intent);
                         finishAffinity();
                         break;
@@ -130,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (v.getId()) {
                     case R.id.imagebtn3:
-                        Intent intent=new Intent(MainActivity.this,MainActivity2.class);
+                        Intent intent=new Intent(MainActivity2.this,MainActivity.class);
                         startActivity(intent);
                         finishAffinity();
                         break;
@@ -174,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             check[i] = ran[i].nextInt(percent[i]) + 1;
             Log.e("mm", check[i] + "//" + Winning[i]);
             int img = random.nextInt(20) + 1;
-            int resDrawable = getResources().getIdentifier("f" + img, "drawable", getPackageName());
+            int resDrawable = getResources().getIdentifier("p" + img, "drawable", getPackageName());
 
             if (Winning[i] == check[i] && WinFlag == false) {
                 switch (i+1){
@@ -262,7 +260,7 @@ public class MainActivity extends AppCompatActivity {
                 int k = 0;
                 for (int j = 0; j < 10; j++) {
                     if (j != posL && j != posR) {
-                        resDrawable = getResources().getIdentifier("f" + a[k], "drawable", getPackageName());
+                        resDrawable = getResources().getIdentifier("p" + a[k], "drawable", getPackageName());
                         imageViews[j].setImageResource(resDrawable);
                         k++;
                     }
@@ -295,7 +293,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             for (int j = 0; j < 10; j++) {
-                int resDrawable = getResources().getIdentifier("f" + a[j], "drawable", getPackageName());
+                int resDrawable = getResources().getIdentifier("p" + a[j], "drawable", getPackageName());
                 imageViews[j].setImageResource(resDrawable);
                 if (j < 5) {
                     textViews[pos[j]].setText(price[j]);
