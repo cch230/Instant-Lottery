@@ -1,6 +1,6 @@
 # Instant-Lottery
 ## 즉석 복권 체험 어플
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/cch230/Instant-Lottery" style="display: block; object-fit: cover; border-radius: 1px; width: 100px; pointer-events: auto;">
+<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/cch230/Instant-Lottery&amp;&amp;count_bg=%23383333&amp;title_bg=%23555555&amp;icon=&amp;icon_color=%23E7E7E7" style="display: block; object-fit: cover; border-radius: 1px; width: 100px; pointer-events: auto;">
 
 ## 사용언어 및 환경  
 android studio    
